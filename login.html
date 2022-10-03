@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <meta name="google-signin-scope" content="profile email" />
+  <meta name="google-signin-client_id" content="1019223786709-evsio6865hmmiv0qocj1p7nktdp40dgi.apps.googleusercontent.com">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+
+  <!--se agrega un css para el login de la clase cabezal-->
+  <link rel="stylesheet" href="css/login.css">
+  <style>
+    body {
+      background-color: rgb(248, 249, 250);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- se crea un main con estilos de bs, igual que a sus elementos-->
+  <main class="mt-5">
+    <div class="cabezal">
+      <img src="img/login.png" alt="Img Login" class="img-thumbnail">
+      <h1 class="mb-3">Inicio de sesión</h1>
+      <hr class="my-4">
+      <div class="row g-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email">
+        <label for="password1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+        <button class="btn btn-primary" type="button" id="regBtn">Ingresar</button>
+      </div><br>
+      
+        
+        <div id="g_id_onload" data-client_id="1019223786709-evsio6865hmmiv0qocj1p7nktdp40dgi.apps.googleusercontent.com" data-callback="handleCredentialResponse">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
+      
+    </div>
+
+
+
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <!-- esta parte sirve para mostrar que el falta algo en los campos, el id alert-danger esta ingresado en bootstrap.min.css-->
+  <div class="alert alert-danger alert-dismissible fade" role="alert" id="alert-danger">
+    <p>No se ha ingresado un Email y/o Contraseña</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <script src="js/login.js"></script>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+  
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+
+</html>

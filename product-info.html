@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container" id="contenedor-ppal">
+    </div>
+    <div class="container" id="contenedor-img">
+      <h8><strong>Imágenes ilustrativas</strong></h8><br>
+      <div id="contenedor-imagenes" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" id="carrusel-indicadores"></div>
+        <div class="carousel-inner" id="carrusel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#contenedor-imagenes" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#contenedor-imagenes" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    </div>
+    <div class="container" id="contenedor-comment">
+      <h4>Comentarios</h4>
+      <div class="list-group" id="cat-list-container"></div><br>
+      <h4>Comentar</h4>
+      <h6>Tu opinion</h6>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label for="Description">Descripción</label>
+          <textarea name="Description" class="form-control" id="Description"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="puntuacion">Tu puntuación</label>
+          <select name="puntuacion" class="form-select custom-select d-block w-100" id="puntuacion" required>
+            <option value="" hidden selected>Seleccionar puntuación</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <div class="invalid-feedback">
+            Ingresa una categoría válida.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <button class="btn btn-primary btn-lg" type="submit" id="envio">Enviar</button><br>
+    </div>
+    <div class="container" id="contenedor-related">
+      <br><hr><br>
+      <h4>Productos relacionados</h4>
+      <div class="row row-cols-1 row-cols-md-4 g-4" id="contenedor-relaciones"></div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+        2022</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+</body>
+
+</html>
